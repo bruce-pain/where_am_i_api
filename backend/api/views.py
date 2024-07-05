@@ -49,5 +49,6 @@ def get_me(request: Request):
     geodata = get_geodata(client_ip)
 
     payload = {"client_ip": client_ip, "geodata": geodata}
+    pprint(payload)
 
     return Response(data=payload)
